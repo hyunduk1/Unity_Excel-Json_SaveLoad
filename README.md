@@ -1,18 +1,19 @@
 # Unity_Excel-Json_SaveLoad
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System.Text.RegularExpressions;
-using System.IO;
-public class CDataMng : MonoBehaviour
-{
-    [System.Serializable]
-    public class SaveData
+
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using System.Text.RegularExpressions;
+    using System.IO;
+    public class CDataMng : MonoBehaviour
     {
-        public int playerScore;
-        public Vector3 EditPosition;
-    }
+        [System.Serializable]
+        public class SaveData
+        {
+            public int playerScore;
+            public Vector3 EditPosition;
+        }
 
     private static readonly string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
     private static readonly string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
